@@ -15,6 +15,14 @@ if ( ! function_exists( 'medusa_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+function wpt_register_js() {
+    wp_enqueue_script( 'tether', get_template_directory_uri().'/js/tether.min.js');
+    wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
+    wp_enqueue_script('jquery.bootstrap.min');
+}
+add_action( 'init', 'wpt_register_js' );
+
 function medusa_setup() {
 	/*
 	 * Make theme available for translation.
