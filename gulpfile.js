@@ -93,7 +93,7 @@ gulp.task('makepot', function () {
 
 gulp.task('browserSync', function() {
   browserSync({
-    proxy: 'localhost/thatmuch',
+    proxy: 'localhost/thatmuch/thatmuch',
     port: 8080,
     open: true,
     notify: false
@@ -104,7 +104,7 @@ gulp.task('sass-watch',['sass'], browserSync.reload);
 
 gulp.task('watch', function () {
   browserSync({
-  proxy: 'localhost/thatmuch',
+  proxy: 'localhost/thatmuch/thatmuch',
   port: 8080,
   open: true,
   notify: false

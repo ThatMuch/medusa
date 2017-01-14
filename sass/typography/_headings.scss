@@ -1,3 +1,30 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: $font__title;
+	font-weight: 700;
+}
+
+h1 {
+font-size: 50px;
+line-height: 67px;
+}
+h2 {
+font-size: 30px;
+line-height: 66px;
+}
+
+h3 {
+font-size: 25px;
+line-height: 49px;
+}
+
+h4 {
+font-size: 25px;
+line-height: 49px;
+}
+
+h5 {
+font-size: 20px;
+line-height: 30px;
+text-align: center;
 }
