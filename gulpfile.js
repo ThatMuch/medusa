@@ -87,13 +87,13 @@ gulp.task('makepot', function () {
       bugReport: 'https://example.com/bugreport/',
       team: ' <info@example.com>'
     }))
-    .pipe(gulp.dest('languages'))
+    .pipe(gulp.dest('languages/medusa.pot'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('browserSync', function() {
   browserSync({
-    proxy: 'localhost/thatmuch/thatmuch',
+    proxy: 'localhost/thatmuch/thatmuchtest',
     port: 8080,
     open: true,
     notify: false
@@ -104,7 +104,7 @@ gulp.task('sass-watch',['sass'], browserSync.reload);
 
 gulp.task('watch', function () {
   browserSync({
-  proxy: 'localhost/thatmuch/thatmuch',
+  proxy: 'localhost/thatmuch/thatmuchtest',
   port: 8080,
   open: true,
   notify: false
