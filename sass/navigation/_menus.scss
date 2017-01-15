@@ -3,6 +3,11 @@
 	display: block;
 	float: left;
 	width: 100%;
+		position: fixed;
+	top: 0;
+	left: 0;
+	padding: 15px;
+	z-index: 99999;
 
 	ul {
 		display: none;
@@ -32,6 +37,7 @@
 
 			a {
 				width: 200px;
+				color: $white;
 			}
 
 			:hover > a,

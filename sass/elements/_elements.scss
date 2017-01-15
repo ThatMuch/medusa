@@ -39,4 +39,23 @@ figure {
 	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.site-header {
+	min-height: 490px;
+	max-height: 643px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	color: $white;
+	position: relative;
+	width: 100%;
+	svg {
+	position: absolute;
+	z-index: 1;
+	bottom: -2px;
+	left: -4px;
+	}
+}
+
+
+
 @import "tables";
