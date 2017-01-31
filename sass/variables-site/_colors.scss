@@ -1,18 +1,19 @@
-$white: rgba(100%,100%,100%,1.00); 
-$dark_grey: rgba(29%,29%,29%,1.00); 
-$grey: rgba(59%,59%,59%,1.00); 
-$primary: rgba(36%,21%,69%,1.00); 
-$black: rgba(0%,0%,0%,1.00); 
-$alert: rgba(82%,0%,11%,1.00); 
-$green: rgba(31%,89%,74%,1.00); 
-$hover: rgba(27%,18%,71%,0.5); 
-$light_grey: rgba(85%,85%,85%,1.00); 
+$white: rgba(100%,100%,100%,1.00);
+$dark_grey: rgba(29%,29%,29%,1.00);
+$grey: rgba(59%,59%,59%,1.00);
+$primary: rgba(36%,21%,69%,1.00);
+$black: rgba(0%,0%,0%,1.00);
+$alert: rgba(82%,0%,11%,1.00);
+$green: rgba(31%,89%,74%,1.00);
+$hover: rgba(27%,18%,71%,0.5);
+$light_grey: rgba(85%,85%,85%,1.00);
 $gradient: linear-gradient(-134deg, #3023AE 0%, #C96DD8 100%);
 
 $color__background-body: $white;
 $color__background-screen: $white;
 $color__background-hr: $grey;
 $color__background-button: $green;
+$color__background-nav: $green;
 $color__background-pre: $white;
 $color__background-ins: $white;
 

@@ -23,6 +23,7 @@ function wpt_register_js() {
 }
 add_action( 'init', 'wpt_register_js' );
 
+
 function medusa_setup() {
 	/*
 	 * Make theme available for translation.

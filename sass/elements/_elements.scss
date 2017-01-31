@@ -48,11 +48,14 @@ figure {
 	color: $white;
 	position: relative;
 	width: 100%;
-	svg {
+	margin-right: 0!important;
+	margin-left: 0!important;
+	padding: 0;
+	.bottom-header svg {
 	position: absolute;
 	z-index: 1;
-	bottom: -2px;
-	left: -4px;
+	bottom: 0;
+	left: 0;
 	}
 }
 
