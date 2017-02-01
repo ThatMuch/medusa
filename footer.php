@@ -13,11 +13,18 @@
 	</main><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'medusa' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'medusa' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'medusa' ), 'medusa', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
+		<nav id="footer-navigation" class="row navbar navbar-toggleable-md navbar-light bg-faded" role="navigation">
+		 <div class="navbar-brand  col"><a href="#"><?php bloginfo( 'name' ); ?></a></div>
+
+			<?php wp_nav_menu( array(
+				'theme_location' => 'secondary_menu',
+				'container' => 'ul',
+                'menu_class'        => 'col navbar-nav nav justify-content-center',
+                'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                'walker'            => new wp_bootstrap_navwalker(),
+			));?>
+<p class="copyright col text-right">© That Much 2017</p>
+		</nav>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

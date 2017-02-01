@@ -16,57 +16,56 @@ get_header(); ?>
 
 <section id="about">
 	<h3>Qui sommes nous ?</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa beatae dolorum, culpa libero quos neque, inventore delectus, dignissimos cupiditate repudiandae vel vero expedita error odit odio, voluptatibus eius natus totam.</p>
+	<?php the_field('description', 'option'); ?>
 </section>
 <section id="services">
 	<h3>Nos services</h3>
-	<ul>
-		<li>
-			<h4>1</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit itaque ipsa ducimus deleniti perspiciatis est quae rerum. Animi excepturi, maxime? Nobis necessitatibus nisi, adipisci. Fugiat ipsam at officia magni minus!</p>
-		</li>
-		<li>
-			<h4>2</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit itaque ipsa ducimus deleniti perspiciatis est quae rerum. Animi excepturi, maxime? Nobis necessitatibus nisi, adipisci. Fugiat ipsam at officia magni minus!</p>
-		</li>
-	</ul>
+
+					<?php $services = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => 9, ) ); ?>
+						<?php if ( $services->have_posts() ) : ?>
+							<?php /* The loop */ $ink_count = 0; $ink_row_count=0 ;?>
+							<?php	while ( $services->have_posts() ) : $services->the_post();
+					if ($ink_count == 0 ) : ?>
+								<ul class='row-<?php echo $ink_row_count ;?> row'>
+
+					<?php endif;?>
+					<?php get_template_part( 'template-parts/content','service' ); ?>
+					<?php if ($ink_count == 2 )
+										{
+											echo "</ul>";
+											$ink_count=0;
+											$ink_row_count++;
+										}
+									else {
+										$ink_count++;
+									}
+					$i++;
+					endwhile;?>
+									<?php endif; ?>
+
 </section>
 <section id="team">
-	<ul>
-		<li>
-			<ul class="social">
-				<li class="git"></li>
-				<li class="linkedin"></li>
-				<li class="twitter"></li>
-			</ul>
-			<div class="pp">
-				<p class="name">Prenom Nom</p>
-			</div>
-			<h5 class="role">1</h5>
-		</li>
-		<li>
-			<ul class="social">
-				<li class="git"></li>
-				<li class="linkedin"></li>
-				<li class="twitter"></li>
-			</ul>
-			<div class="pp">
-				<p class="name">Prenom Nom</p>
-			</div>
-			<h5 class="role">2</h5>
-		</li>
-		<li>
-			<ul class="social">
-				<li class="git"></li>
-				<li class="linkedin"></li>
-				<li class="twitter"></li>
-			</ul>
-			<div class="pp">
-				<p class="name">Prenom Nom</p>
-			</div>
-			<h5 class="role">3</h5>
-		</li>
-	</ul>
+	<?php $services = new WP_Query( array( 'post_type' => 'equipe', 'posts_per_page' => 9, ) ); ?>
+						<?php if ( $services->have_posts() ) : ?>
+							<?php /* The loop */ $ink_count = 0; $ink_row_count=0 ;?>
+							<?php	while ( $services->have_posts() ) : $services->the_post();
+					if ($ink_count == 0 ) : ?>
+								<ul class='row-<?php echo $ink_row_count ;?> row'>
+
+					<?php endif;?>
+					<?php get_template_part( 'template-parts/content','membre' ); ?>
+					<?php if ($ink_count == 2 )
+										{
+											echo "</ul>";
+											$ink_count=0;
+											$ink_row_count++;
+										}
+									else {
+										$ink_count++;
+									}
+					$i++;
+					endwhile;?>
+									<?php endif; ?>
 </section>
 <section id="portfolio">
 	<article class="col-md-6">
@@ -74,23 +73,25 @@ get_header(); ?>
 		<ul>
 			<li></li>
 			<li></li>
-			<button></button>
+			<button>+</button>
 		</ul>
 	</article>
 </section>
-<section id="contact">
+<section id="contact" class="row">
 	<div class="col-md-6">
 		<h3>Nous contacter</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa maxime architecto, voluptas rerum sed eos animi tempora nobis eveniet deleniti laborum fuga, fugiat, reprehenderit distinctio molestias sequi dolores quis iusto.</p>
-			<ul>
-				<li class="git"></li>
-				<li class="linkedin"></li>
-				<li class="pinterest"></li>
-			</ul>
+	<ul class="col-12 social nav align-self-center justify-content-center">
+		<?php if(get_field("github", 'option')):;?><li class="git nav-item "><a href="<?php the_field("github", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+</a></li><?php endif;?>
+		<?php if(get_field("linkedin", 'option')):;?><li class="linkedin nav-item"><a href="<?php the_field("linkedin", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li><?php endif;?>
+		<?php if(get_field("pinterest", 'option')):;?><li class="pinterest nav-item"><a href="<?php the_field("pinterest", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i>
+</a></li><?php endif;?>
+	</ul>
 
 	</div>
 	<div class="col-md-6 form">
-		<form action=""></form>
+		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Formulaire') ) ?>
 	</div>
 </section>
 <?php

@@ -58,7 +58,12 @@ figure {
 	left: 0;
 	}
 }
-
+.site-footer{
+	.copyright {
+		margin-bottom: 0;
+		font-size: 0.8rem;
+	}
+}
 
 
 @import "tables";

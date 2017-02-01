@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/c9c8175180.js"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -41,6 +42,18 @@
     </g>
 </svg>
 			</button>
+					<nav id="site-navigation" class="main-navigation row " role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary_menu', 'menu_class' => 'col-12 align-self-center', 'container'=> 'ul' ) ); ?>
+
+	<ul class="col-12 social nav align-self-center justify-content-center">
+		<?php if(get_field("github", 'option')):;?><li class="git nav-item "><a href="<?php the_field("github", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-github" aria-hidden="true"></i>
+</a></li><?php endif;?>
+		<?php if(get_field("linkedin", 'option')):;?><li class="linkedin nav-item"><a href="<?php the_field("linkedin", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li><?php endif;?>
+		<?php if(get_field("pinterest", 'option')):;?><li class="pinterest nav-item"><a href="<?php the_field("pinterest", 'option') ;?>" class="nav-link" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i>
+</a></li><?php endif;?>
+	</ul>
+
+		</nav><!-- #site-navigation -->
 		<div class="site-branding container col">
 
 			<?php
@@ -58,10 +71,6 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation row align-items-center" role="navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'col', ) ); ?>
-		</nav><!-- #site-navigation -->
 
 <div class="bottom-header"><svg width="100%" height="78" viewBox="0 0 100% 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->

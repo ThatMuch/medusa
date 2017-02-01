@@ -104,6 +104,15 @@ function medusa_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Formulaire', 'medusa' ),
+		'id'            => 'sidebar-2',
+		'description'   => esc_html__( 'Add widgets here.', 'medusa' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'medusa_widgets_init' );
 
@@ -122,6 +131,89 @@ function medusa_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'medusa_scripts' );
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
+add_action('init', 'my_custom_init'); function my_custom_init() {
+/* notre code PHP pour rajouter les custom post type */
+register_post_type(   'equipe',
+array(
+		'label' => 'Equipe',
+		'labels' => array(
+		'name' => 'Equipe',
+		'singular_name' => 'Membre',
+		'all_items' => 'Toute l\'equipe',
+		'add_new_item' => 'Ajouter un membre',
+		'edit_item' => 'Éditer le membre',
+		'new_item' => 'Nouveau membre',
+		'view_item' => 'Voir le membre',
+		'search_items' => 'Rechercher parmi les membres',
+		'not_found' => 'Pas de membres trouvés',
+		'not_found_in_trash'=> 'Pas de membre dans la corbeille'
+	),
+	'public' => true,
+	'capability_type' => 'post',
+	'supports' => array(
+		'title',
+		'thumbnail',
+	),
+) );
+register_post_type(   'portfolio',
+array(
+		'label' => 'Portfolio',
+		'labels' => array(
+		'name' => 'Portfolio',
+		'singular_name' => 'Projet',
+		'all_items' => 'Tous les projets',
+		'add_new_item' => 'Ajouter un projet',
+		'edit_item' => 'Éditer le projet',
+		'new_item' => 'Nouveau projet',
+		'view_item' => 'Voir le projet',
+		'search_items' => 'Rechercher parmi les projets',
+		'not_found' => 'Pas de projets trouvés',
+		'not_found_in_trash'=> 'Pas de projet dans la corbeille'
+	),
+	'public' => true,
+	'capability_type' => 'post',
+	'supports' => array(
+		'title',
+		'thumbnail',
+		//'editor',
+	),
+) );
+
+	register_post_type(   'services',
+array(
+		'label' => 'Services',
+		'labels' => array(
+		'name' => 'Services',
+		'singular_name' => 'Service',
+		'all_items' => 'Tous les services',
+		'add_new_item' => 'Ajouter un service',
+		'edit_item' => 'Éditer le service',
+		'new_item' => 'Nouveau service',
+		'view_item' => 'Voir le service',
+		'search_items' => 'Rechercher parmi les service',
+		'not_found' => 'Pas de services trouvés',
+		'not_found_in_trash'=> 'Pas de services dans la corbeille'
+	),
+	'public' => true,
+	'capability_type' => 'post',
+	'supports' => array(
+		'title',
+		'editor',
+	),
+) );
+}
+
+
+function register_my_menu() {
+  register_nav_menu('secondary_menu',__( 'Secondary' ));
+}
+add_action( 'init', 'register_my_menu' );
 
 /**
  * Implement the Custom Header feature.
@@ -147,3 +239,6 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// Register Custom Navigation Walker
+require_once('wp_bootstrap_navwalker.php');

@@ -31,18 +31,6 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: footer.php:17
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:17
-msgid "Proudly powered by %s"
-msgstr ""
-
-#: footer.php:19
-msgid "Theme: %1$s by %2$s."
-msgstr ""
-
 #: functions.php:56
 msgid "Primary"
 msgstr ""
@@ -51,11 +39,15 @@ msgstr ""
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:101
+#: functions.php:101, functions.php:110
 msgid "Add widgets here."
 msgstr ""
 
-#: header.php:24
+#: functions.php:108
+msgid "Formulaire"
+msgstr ""
+
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
