@@ -14,11 +14,11 @@
 
 get_header(); ?>
 
-<section id="about">
+<section id="about" class="container">
 	<h3>Qui sommes nous ?</h3>
 	<?php the_field('description', 'option'); ?>
 </section>
-<section id="services">
+<section id="services" class="container">
 	<h3>Nos services</h3>
 
 					<?php $services = new WP_Query( array( 'post_type' => 'services', 'posts_per_page' => 9, ) ); ?>
@@ -45,18 +45,20 @@ get_header(); ?>
 
 </section>
 <section id="team">
+<img class="top-header" src="<?php echo get_template_directory_uri(); ?>/images/top.svg" alt="">
+<div class="container">
 	<?php $services = new WP_Query( array( 'post_type' => 'equipe', 'posts_per_page' => 9, ) ); ?>
 						<?php if ( $services->have_posts() ) : ?>
 							<?php /* The loop */ $ink_count = 0; $ink_row_count=0 ;?>
 							<?php	while ( $services->have_posts() ) : $services->the_post();
 					if ($ink_count == 0 ) : ?>
-								<ul class='row-<?php echo $ink_row_count ;?> row'>
+								<div class='row-<?php echo $ink_row_count ;?> row'>
 
 					<?php endif;?>
 					<?php get_template_part( 'template-parts/content','membre' ); ?>
 					<?php if ($ink_count == 2 )
 										{
-											echo "</ul>";
+											echo "</div>";
 											$ink_count=0;
 											$ink_row_count++;
 										}
@@ -66,8 +68,10 @@ get_header(); ?>
 					$i++;
 					endwhile;?>
 									<?php endif; ?>
+</div>
+<img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
 </section>
-<section id="portfolio">
+<section id="portfolio" class="container">
 	<article class="col-md-6">
 		<h5 class="title"></h5>
 		<ul>
@@ -77,8 +81,9 @@ get_header(); ?>
 		</ul>
 	</article>
 </section>
-<section id="contact" class="row">
-	<div class="col-md-6">
+<section id="contact" class="container">
+<div class="row">
+		<div class="col-md-6">
 		<h3>Nous contacter</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa maxime architecto, voluptas rerum sed eos animi tempora nobis eveniet deleniti laborum fuga, fugiat, reprehenderit distinctio molestias sequi dolores quis iusto.</p>
 	<ul class="col-12 social nav align-self-center justify-content-center">
@@ -93,6 +98,8 @@ get_header(); ?>
 	<div class="col-md-6 form">
 		<?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Formulaire') ) ?>
 	</div>
+</div>
+
 </section>
 <?php
 get_footer();

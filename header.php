@@ -71,15 +71,8 @@
 			<?php
 			endif; ?>
 		</div><!-- .site-branding -->
-
-<div class="bottom-header"><svg width="100%" height="78" viewBox="0 0 100% 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <path d="M4.27318146,-3.19744231e-13 L0,-3.19744231e-13 L0,79.3653676 L1440,79.3653676 L1440,-3.19744231e-13 L1430.13036,-3.19744231e-13 C769.081287,169.131289 65.2881047,14.0606124 4.27318146,-1.00024433e-11 Z" id="header-bottom" stroke="none" fill="#FFFFFF" fill-rule="evenodd"></path>
-</svg></div>
-
+<img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
 	</header>
 	<!-- #masthead -->
-	<main id="main" class="site-main container" role="main">
+	<main id="main" class="site-main" role="main">
 

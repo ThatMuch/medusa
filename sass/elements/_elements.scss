@@ -51,19 +51,32 @@ figure {
 	margin-right: 0!important;
 	margin-left: 0!important;
 	padding: 0;
-	.bottom-header svg {
-	position: absolute;
-	z-index: 1;
-	bottom: 0;
-	left: 0;
-	}
 }
 .site-footer{
+	#footer-navigation {
+			margin-left: 0;
+	margin-right: 0;
+	}
 	.copyright {
 		margin-bottom: 0;
 		font-size: 0.8rem;
 	}
 }
-
+	.bottom-header{
+	position: absolute;
+	z-index: 1;
+	bottom: -1px;
+	left: 0;
+	width: 100%;
+	}
+.top-header {
+	position: absolute;
+	z-index: 1;
+	top: -1px;
+	left: 0;
+	width: 100%;
+}
+section {
+position: relative;}
 
 @import "tables";

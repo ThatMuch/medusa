@@ -1,7 +1,6 @@
 button,
 input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+input[type="reset"] {
 	border: 1px solid;
 	border-color: $color__border-button;
 	border-radius: 3px;
@@ -28,10 +27,22 @@ input[type="submit"] {
 	background: $color__background-button;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20);
 	color: $white;
+font-size: 1rem;
+letter-spacing: 0;
 }
 
-.btn-secondary {
+input[type="submit"], .btn-secondary {
 	border: 3px solid #50E3BC;
 	color: $color__border-button;
 	letter-spacing: 0;
+	border-radius: 100px;
+	font-size: 1rem;
+	letter-spacing: 0;
+	&:hover{
+			background: $color__background-button;
+	border: 3px solid #50E3BC;
+	color: $white;
+font-size: 1rem;
+letter-spacing: 0;
+	}
 }
