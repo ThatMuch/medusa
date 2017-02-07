@@ -13,7 +13,8 @@
 	</main><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<nav id="footer-navigation" class="row navbar navbar-toggleable-md navbar-light bg-faded" role="navigation">
+	<img class="top-header" src="<?php echo get_template_directory_uri(); ?>/images/top.svg" alt="">
+		<nav id="footer-navigation" class="row navbar navbar-toggleable-md " role="navigation">
 		 <div class="navbar-brand  col"><a href="#"><?php bloginfo( 'name' ); ?></a></div>
 
 			<?php wp_nav_menu( array(

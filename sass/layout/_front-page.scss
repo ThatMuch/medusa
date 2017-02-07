@@ -6,35 +6,59 @@
 		color: $white;
 	}
 }
-
 .figure.member {
 	text-align: center;
 	color: $white;
 	&:nth-child(even) {
 		margin-top: 100px;
 	}
-	.social {
+
+	.pp {
+		position: relative;
+		margin: 0 auto;
+			.social {
+			opacity: 0;
+			visibility: hidden;
+		transition-duration: .5s;
+
 		li {
 			display: inline;
 		}
 	}
-	.pp {
-		position: relative;
-		margin: 0 auto;
 		img {
 			height: 186px;
 			width: 186px;
+			transition-duration: .5s;
+			&:hover {
+				opacity: .5;
+			}
+
 		}
 		.name {
+			opacity: 0;
+			visibility: hidden;
 			font-size: 1.2rem;
 			line-height: 30px;
+			left: 30%;
+			top: 40%;
+			z-index: 1;
+			position: absolute;
+			transition-duration: .5s;
 		}
 	}
+
+		.pp:hover .name {
+			opacity: 1;
+			visibility: visible;
+		}
+		.pp:hover .social {
+			opacity: 1;
+			visibility: visible;
+		}
 	figcaption {
 		color: $white;
 	}
 }
-
 #portfolio {
 	.load-more {
 		height: 100px;
@@ -44,57 +68,69 @@
 		bottom: 8px;
 		background-repeat: no-repeat;
 		background-size: cover;
-			.btn-more{
-		margin: 0 auto;
-display: block;
-	}
-	}
-
-
-	article.project{
-	height: 414px;
-	padding: 0.5rem;
-	.article-wrap{
-	height: 100%;
-	width: 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center center;
-	text-align: center;
-	position: relative;
-
-	&:hover header {
-		opacity: 1;
-		visibility: visible;
-	}
-	header {
-		transition-duration: 1s;
-		opacity: 0;
-		visibility: hidden;
-		height: 100%;
-		width: 100%;
-		text-align: center;
-		padding: 3rem 1.5rem;
-		background-color: $hover;
-		position: absolute;
-		top: 0;
-		left: 1rem;
-		.title {
-			color: $white;
-		}
-		.post_tags {
+		.btn-more {
 			margin: 0 auto;
-			li {
-				float: left;
+			display: block;
+		}
+	}
+	article.project {
+		height: 414px;
+		padding: 0.5rem;
+		.article-wrap {
+			height: 100%;
+			width: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			&:hover header {
+				opacity: 1;
+				visibility: visible;
+				.post_tags li,
+				.post_tags li:last-child {
+					bottom: 0;
+				}
 			}
-			img {
-				width: 50px;
-				height: 50px;
+			header {
+				transition-duration: 1s;
+				opacity: 0;
+				visibility: hidden;
+				height: 100%;
+				width: 100%;
+				text-align: center;
+				padding: 3rem 1.5rem;
+				background-color: $hover;
+				position: absolute;
+				top: 0;
+				left: 1rem;
+				.title {
+					color: $white;
+				}
+				.post_tags {
+					margin: 0 auto;
+					li {
+						float: left;
+						bottom: -100px;
+						transition-duration: .8s;
+						&:last-child {
+						bottom: -150px;
+
+					}
+					}
+
+					img {
+						width: 50px;
+						height: 50px;
+					}
+				}
 			}
 		}
 	}
 }
+#contact {
+	.social {
+		font-size: 3rem;
+	}
 }
-}
-
-

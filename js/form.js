@@ -10,8 +10,3 @@ $(document).on('focus active', 'textarea', function () {
 $(document).on('blur', 'textarea', function () {
 		$('label[for=' + $(this).attr('id') + ']').removeClass('active');
 	});
-
-$(document).on('invalid', 'textarea', function () {
-		$('label[for=' + $(this).attr('id') + ']').removeClass('alert');
-	});
-

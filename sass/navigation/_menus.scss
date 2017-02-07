@@ -5,14 +5,52 @@
 		z-index: 10000000;
 		background-color: transparent;
 		border: none;
-	margin: 30px;
+		margin: 30px;
 		&:hover {
 			box-shadow: none;
 		}
+	svg {
+		width: 45px;
+		height: auto;
+		fill: $white;
 	}
+	}
+#bar-1,
+#bar-3 {
+    transition: .2s;
+    transform-origin: center;
+}
+
+#burger-menu.active svg #bar-1 {
+    transform: translateY(29px) rotate(45deg);
+}
+
+#burger-menu.active svg #bar-2 {
+    animation: fadeOut .2s forwards ease-in-out;
+}
+
+#burger-menu.active svg #bar-3 {
+    transform: translateY(-29px) rotate(-45deg);
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+#burger-menu.active + #site-navigation {
+	visibility: visible;
+	opacity: 1;
+}
 #site-navigation {
 	visibility: hidden;
 	opacity: 0;
+	transition-duration: .5s;
 	width: 100%;
 	height: 100%;
 	position: fixed;
