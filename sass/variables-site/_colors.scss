@@ -8,6 +8,7 @@ $green: rgba(31%,89%,74%,1.00);
 $hover: rgba(27%,18%,71%,0.5);
 $light_grey: rgba(85%,85%,85%,1.00);
 $gradient: linear-gradient(-134deg, #3023AE 0%, #C96DD8 100%);
+$alert: #D0011B;
 
 $color__background-body: $white;
 $color__background-screen: $white;
@@ -18,7 +19,7 @@ $color__background-pre: $white;
 $color__background-ins: $white;
 
 $color__text-screen: #21759b;
-$color__text-input: $dark_grey;
+$color__text-input: $grey;
 $color__text-input-focus: $primary;
 $color__link: $primary;
 $color__link-visited: purple;
@@ -28,5 +29,5 @@ $color__text-main: $dark_grey;
 $color__border-button: $green;
 $color__border-button-hover: $green;
 $color__border-button-focus: $green;
-$color__border-input: $dark_grey;
+$color__border-input: $grey;
 $color__border-abbr: $dark_grey;

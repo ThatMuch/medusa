@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="77px" height="77px" viewBox="0 0 77 77" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>code-btn</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="code-btn">
+            <g id="Group">
+                <circle id="Background" fill="#50E3BC" cx="38.5" cy="38.5" r="38.5"></circle>
+                <g id="code-svg" transform="translate(16.000000, 23.000000)" fill="#FFFFFF">
+                    <path d="M23.9948437,0 L23.95125,0.217043478 L16.92,30.8257391 L16.655625,32 L21.0065625,32 L21.0501562,31.7829565 L28.0814062,1.17426087 L28.3457812,1.69912393e-15 L23.9948437,1.69912393e-15 L23.9948437,0 Z M14.0625,4.17391304 L13.4915625,4.6093913 L0.8353125,14.3485217 L0,15.0010435 L0,17.0017391 L0.8353125,17.6542609 L13.4915625,27.3933913 L14.0625,27.8288696 L14.0625,22.5683478 L5.53640625,16.0027826 L14.0625,9.43721739 L14.0625,4.17669565 L14.0625,4.17391304 Z M30.9375,4.17391304 L30.9375,9.43443478 L39.4635938,16 L30.9375,22.5655652 L30.9375,27.826087 L31.5084375,27.3906087 L44.1646875,17.6514783 L45,16.9989565 L45,14.9982609 L44.1646875,14.3457391 L31.5084375,4.6066087 L30.9375,4.17113043 L30.9375,4.17391304 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

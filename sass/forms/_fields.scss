@@ -15,13 +15,32 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: $color__text-input;
-	border: 1px solid $color__border-input;
-	border-radius: 3px;
+	border: inherit;
+	border-bottom: 1px solid $color__border-input;
 	padding: 3px;
-
+	width: 100%;
 	&:focus {
 		color: $color__text-input-focus;
+		outline: inherit;
+		border-bottom-width: 6px;
+		border-image: $gradient;
+		border-image-slice: 1;
 	}
+	&:focus + .wpcf7-not-valid-tip {
+display: none;}
+}
+input[aria-invalid='true'],
+textarea[aria-invalid='true']{
+  border-color: $alert;
+}
+
+label {
+	color: $color__text-input;
+		width: 100%;
+}
+label.active {
+	  		color: $color__text-input-focus;
+			font-weight: 700;
 }
 
 select {

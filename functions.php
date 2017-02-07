@@ -19,7 +19,9 @@ if ( ! function_exists( 'medusa_setup' ) ) :
 function wpt_register_js() {
     wp_enqueue_script( 'tether', get_template_directory_uri().'/js/tether.min.js');
     wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
+	wp_register_script('form.min.js', get_template_directory_uri() . '/js/form.min.js');
     wp_enqueue_script('jquery.bootstrap.min');
+    wp_enqueue_script('form.min.js');
 }
 add_action( 'init', 'wpt_register_js' );
 
@@ -174,7 +176,7 @@ array(
 		'view_item' => 'Voir le projet',
 		'search_items' => 'Rechercher parmi les projets',
 		'not_found' => 'Pas de projets trouvés',
-		'not_found_in_trash'=> 'Pas de projet dans la corbeille'
+		'not_found_in_trash'=> 'Pas de projet dans la corbeille',
 	),
 	'public' => true,
 	'capability_type' => 'post',
@@ -183,6 +185,7 @@ array(
 		'thumbnail',
 		//'editor',
 	),
+	'taxonomies' => array('post_tag' ),
 ) );
 
 	register_post_type(   'services',

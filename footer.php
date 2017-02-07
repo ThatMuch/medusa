@@ -17,8 +17,8 @@
 		 <div class="navbar-brand  col"><a href="#"><?php bloginfo( 'name' ); ?></a></div>
 
 			<?php wp_nav_menu( array(
-				'theme_location' => 'secondary_menu',
-				'container' => 'ul',
+				'theme_location' 	=> 'secondary_menu',
+				'container' 		=> 'ul',
                 'menu_class'        => 'col navbar-nav nav justify-content-center',
                 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
                 'walker'            => new wp_bootstrap_navwalker(),

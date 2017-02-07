@@ -77,6 +77,11 @@ figure {
 	width: 100%;
 }
 section {
-position: relative;}
+position: relative;
+margin-bottom: 100px;
+	.section-title{
+		margin-bottom: 20px;
+	}
+}
 
 @import "tables";
