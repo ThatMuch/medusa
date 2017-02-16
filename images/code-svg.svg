@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="149px" height="107px" viewBox="0 0 149 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>code-svg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="24.2151254%" y1="0%" x2="76.8162685%" y2="100.999999%" id="linearGradient-1">
+            <stop stop-color="#3F3BBC" offset="0%"></stop>
+            <stop stop-color="#D587E0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="code-svg" fill-rule="nonzero" fill="#FFFFFF">
+            <g id="Front-Page">
+                <g id="Desktop">
+                    <g id="Services">
+                        <g id="Web">
+                            <g id="code-svg" transform="translate(0.418107, 0.000000)">
+                                <path d="M78.9905504,0 L78.8470407,0.720051536 L55.7003049,102.265781 L54.8299877,106.161444 L69.1531878,106.161444 L69.2966975,105.441393 L92.4434333,3.89566344 L93.3137505,5.63692034e-15 L78.9905504,5.63692034e-15 L78.9905504,0 Z M46.2934715,13.8471449 L44.4139566,15.2918637 L2.74983221,47.6018685 L0,49.7666388 L0,56.4040369 L2.74983221,58.5688073 L44.4139566,90.8788121 L46.2934715,92.3235309 L46.2934715,74.8715125 L18.2257397,53.0899536 L46.2934715,31.3083946 L46.2934715,13.8563763 L46.2934715,13.8471449 Z M101.845637,13.8471449 L101.845637,31.2991632 L129.913369,53.0807222 L101.845637,74.8622811 L101.845637,92.3142994 L103.725152,90.8695806 L145.389277,58.5595758 L148.139109,56.3948055 L148.139109,49.7574074 L145.389277,47.5926371 L103.725152,15.2826323 L101.845637,13.8379135 L101.845637,13.8471449 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

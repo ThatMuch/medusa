@@ -40,8 +40,8 @@ figure {
 }
 
 .site-header {
-	min-height: 490px;
-	max-height: 643px;
+	min-height: 700px;
+	max-height: 1000px;
 	background-size: cover;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -51,6 +51,15 @@ figure {
 	margin-right: 0!important;
 	margin-left: 0!important;
 	padding: 0;
+	.site-branding {
+		max-width: 800px;
+	}
+	.call-to-action{
+		bottom: 0;
+position: absolute;
+left: 45vw;
+z-index: 3;
+	}
 }
 .site-footer{
 	#footer-navigation {

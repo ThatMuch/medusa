@@ -47,7 +47,7 @@ msgstr ""
 msgid "Formulaire"
 msgstr ""
 
-#: header.php:25
+#: header.php:36
 msgid "Skip to content"
 msgstr ""
 

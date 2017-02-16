@@ -19,7 +19,18 @@
 	<script src="https://use.fontawesome.com/c9c8175180.js"></script>
 <?php wp_head(); ?>
 </head>
+<script>
 
+	$(document).ready(function() {
+		$('.call-to-action').on('click', function() { // Au clic sur un élément
+			var page = $(this).attr('href'); // Page cible
+			var speed = 750; // Durée de l'animation (en ms)
+			//var nav = $('nav').offset();
+			$('html, body').animate( { scrollTop: $(page).offset().top - 85}, speed ); // Go
+			return false;
+		});
+	});
+</script>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'medusa' ); ?></a>
@@ -50,17 +61,21 @@
 			if ( is_front_page() ) : ?>
 				<h1 class="site-title text-center"><?php bloginfo( 'name' ); ?></h1>
 
-			<?php
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description text-center"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif;?>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif; ?>
+				<?php
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description text-center"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+
+				<?php endif;?>
+				<?php else : ?>
+					<h1 class="site-title text-center"><?php wp_title('')?></h1>
+			<?php endif; ?>
+
 		</div><!-- .site-branding -->
+		<?php
+			if ( is_front_page() ) : ?>
+		<a href="#contact" class="btn btn-primary call-to-action">Nous contacter</a>
+		<?php endif;?>
 <img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
 	</header>
 	<!-- #masthead -->
