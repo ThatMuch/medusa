@@ -1,5 +1,8 @@
 #services {
 	margin-bottom: 30px;
+	.carousel-item {
+		min-height: 400px;
+	}
 	.carousel-caption {
 		top: 15%;
 				color: $color__text-main;
@@ -29,10 +32,12 @@
 	a {
 		color: $white;
 	}
-}
-.figure.member {
+	.figure.member {
 	text-align: center;
 	color: $white;
+	@include for-size(tablet-portrait) {
+	margin-top: 0 !important;
+	}
 	&:nth-child(even) {
 		margin-top: 100px;
 	}
@@ -78,6 +83,7 @@
 	figcaption {
 		color: $white;
 	}
+}
 }
 #portfolio {
 //	.load-more {

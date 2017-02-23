@@ -55,10 +55,13 @@ figure {
 		max-width: 800px;
 	}
 	.call-to-action{
-		bottom: 0;
+$width: 150px;
 position: absolute;
-left: 45vw;
+bottom: -10px;
+left: calc((100vw / 2) - (#{$width} / 2) );
+width: $width;
 z-index: 3;
+margin: 0 auto;
 	}
 }
 .site-footer{
