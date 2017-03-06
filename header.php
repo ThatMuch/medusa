@@ -26,7 +26,7 @@
 			var page = $(this).attr('href'); // Page cible
 			var speed = 750; // Durée de l'animation (en ms)
 			//var nav = $('nav').offset();
-			$('html, body').animate( { scrollTop: $(page).offset().top - 85}, speed ); // Go
+			$('html, body').animate( { scrollTop: $(page).offset().top}, speed ); // Go
 			return false;
 		});
 	});
@@ -74,7 +74,7 @@
 		</div><!-- .site-branding -->
 		<?php
 			if ( is_front_page() ) : ?>
-		<a href="#contact" class="btn btn-primary call-to-action">Nous contacter</a>
+		<a href="#services" class="call-to-action"><img src="<?php echo get_template_directory_uri(); ?>/images/arrow_down.svg" alt=""></a>
 		<?php endif;?>
 <img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
 	</header>

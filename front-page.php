@@ -13,34 +13,27 @@
  */
 
 get_header(); ?>
-<section id="services" class="container ">
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner" role="listbox">
-<?php $services = new WP_Query( array( 'post_type' => 'services' ) ); ?>
+
+	<?php $services = new WP_Query( array( 'post_type' => 'services' ) ); ?>
 					<?php if ( $services->have_posts() ) : ?>
+					<section id="services" class="container">
+					<h3 class="text-center section-title">Nos services</h3>
+					<div class="row align-items-center">
+							
 					<?php $ink_count = 0; ?>
 						<?php	while ( $services->have_posts() ) : $services->the_post();?>
-							<div class=" carousel-item <?php if ($ink_count == 0 ): ?> active <?php endif ?>">
-   <img src="<?php echo get_template_directory_uri(); ?>/images/Rectangle3.png" alt="<?php echo get_field('icon')['alt']; ?>" class=" d-block img-fluid">
-  <div class="carousel-caption d-none d-md-block">
+						
+  <div class="col service">
   <img src="<?php echo get_field('icon')['url']; ?>" alt="<?php echo get_field('icon')['alt']; ?>" class="icon">
 <h6 class="service-name"><?php the_title(); ?></h6>
 <?php the_content();?>
-  </div>
-</div>
 							<?php $ink_count++ ;?>
+</div>
 						<?php	endwhile;?>
 					<?php endif; ?>
-
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </div>
+					
+
 </section>
 <section id="team">
 <img class="top-header" src="<?php echo get_template_directory_uri(); ?>/images/top.svg" alt="">
