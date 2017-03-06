@@ -253,3 +253,7 @@ require get_template_directory() . '/inc/jetpack.php';
 
 // Register Custom Navigation Walker
 require_once('wp_bootstrap_navwalker.php');
+
+// Update Theme
+require_once('wp-updates-theme.php');
+new WPUpdatesThemeUpdater_1974( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
