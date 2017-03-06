@@ -21,9 +21,13 @@ function wpt_register_js() {
     wp_register_script('jquery.bootstrap.min', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery');
 	wp_register_script('form.min.js', get_template_directory_uri() . '/js/form.min.js');
 	wp_register_script('burger-animate.min.js', get_template_directory_uri() . '/js/burger-animate.min.js');
+	wp_register_script('animate-header.min.js', get_template_directory_uri() . '/js/animate-header.min.js');
+	wp_register_script('scroll.min.js', get_template_directory_uri() . '/js/scroll.min.js');
     wp_enqueue_script('jquery.bootstrap.min');
     wp_enqueue_script('form.min.js');
 	wp_enqueue_script('burger-animate.min.js');
+	wp_enqueue_script('animate-header.min.js');
+	wp_enqueue_script('scroll.min.js');
 }
 add_action( 'init', 'wpt_register_js' );
 

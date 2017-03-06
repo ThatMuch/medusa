@@ -19,18 +19,6 @@
 	<script src="https://use.fontawesome.com/c9c8175180.js"></script>
 <?php wp_head(); ?>
 </head>
-<script>
-
-	$(document).ready(function() {
-		$('.call-to-action').on('click', function() { // Au clic sur un élément
-			var page = $(this).attr('href'); // Page cible
-			var speed = 750; // Durée de l'animation (en ms)
-			//var nav = $('nav').offset();
-			$('html, body').animate( { scrollTop: $(page).offset().top}, speed ); // Go
-			return false;
-		});
-	});
-</script>
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'medusa' ); ?></a>
@@ -55,7 +43,7 @@
 	</ul>
 
 		</nav><!-- #site-navigation -->
-		<div class="site-branding container col">
+		<div class="site-branding container ">
 
 			<?php
 			if ( is_front_page() ) : ?>
@@ -76,7 +64,15 @@
 			if ( is_front_page() ) : ?>
 		<a href="#services" class="call-to-action"><img src="<?php echo get_template_directory_uri(); ?>/images/arrow_down.svg" alt=""></a>
 		<?php endif;?>
-<img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
+<!--<img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">-->
+
+<span class="overlay">
+<svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+<path fill="#FFFFFF" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z"
+	/>
+</svg>
+  </span>
 	</header>
 	<!-- #masthead -->
 	<main id="main" class="site-main" role="main">
