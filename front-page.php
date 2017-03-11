@@ -19,10 +19,10 @@ get_header(); ?>
 					<section id="services" class="container">
 					<h3 class="text-center section-title">Nos services</h3>
 					<div class="row align-items-center">
-							
+
 					<?php $ink_count = 0; ?>
 						<?php	while ( $services->have_posts() ) : $services->the_post();?>
-						
+
   <div class="col service">
   <img src="<?php echo get_field('icon')['url']; ?>" alt="<?php echo get_field('icon')['alt']; ?>" class="icon">
 <h6 class="service-name"><?php the_title(); ?></h6>
@@ -32,12 +32,28 @@ get_header(); ?>
 						<?php	endwhile;?>
 					<?php endif; ?>
 </div>
-					
+
 
 </section>
-<section id="team">
+<section id="team" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg-v.png),linear-gradient(134deg, #3023AE 0%, #C96DD8 100%);">
 <img class="top-header" src="<?php echo get_template_directory_uri(); ?>/images/top.svg" alt="">
+
+<!--
+<span class="overlay">
+<svg viewBox="0 0 500 105" enable-background="new 0 0 500 105"x="0px" y="0px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" PreserveAspectRatio="none">
+     <path fill="#FFFFFF" d="M0.131139751,0 L499.86886,0 C436.222481,64.5109672 347.782819,104.5 250,104.5 C152.217181,104.5 63.7775192,64.5109672 0.131148127,3.85753989e-09 Z"></path>
+</svg>
+
+  </span>
+-->
 <div class="container">
+<h3 class="text-center section-title">Notre équipe</h3>
+<?php
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description text-center"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+
+				<?php endif;?>
 	<?php $services = new WP_Query( array( 'post_type' => 'equipe', 'posts_per_page' => 9, ) ); ?>
 						<?php if ( $services->have_posts() ) : ?>
 							<?php /* The loop */ $ink_count = 0; $ink_row_count=0 ;?>
@@ -60,7 +76,6 @@ get_header(); ?>
 					endwhile;?>
 									<?php endif; ?>
 </div>
-<img class="bottom-header" src="<?php echo get_template_directory_uri(); ?>/images/bottom.svg" alt="">
 <span class="overlay">
 <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
@@ -80,7 +95,8 @@ get_header(); ?>
 								<div class='row-<?php echo $ink_row_count ;?> row'>
 
 					<?php endif;?>
-					<?php get_template_part( 'template-parts/content','project' ); ?>
+
+					<?php include(locate_template('template-parts/content-project.php')); ?>
 					<?php if ($ink_count == 1 )
 										{
 											echo "</div>";

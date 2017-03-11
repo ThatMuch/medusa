@@ -23,7 +23,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'medusa' ); ?></a>
 
-	<header id="masthead" class="site-header row align-items-center" role="banner" style="background-image: url(<?php header_image(); ?>)">
+	<header id="masthead" class="site-header row align-items-center" role="banner" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg-v.png),url(<?php header_image(); ?>)">
 		<button id="burger-menu">
 			<svg version="1.1" id="burger-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 92 92" style="enable-background:new 0 0 92 92;" xml:space="preserve">
                     <path id="bar-1" d="M77.8,10.5H13.3c-3.7,0-6.7,2.9-6.7,6.5s3,6.5,6.7,6.5h64.6c3.7,0,6.7-2.9,6.7-6.5S81.5,10.5,77.8,10.5z" />
@@ -47,14 +47,11 @@
 
 			<?php
 			if ( is_front_page() ) : ?>
-				<h1 class="site-title text-center"><?php bloginfo( 'name' ); ?></h1>
+			<?php if ( function_exists( 'the_custom_logo' ) ) {
+    the_custom_logo();
+}
+			?>
 
-				<?php
-				$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description text-center"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-
-				<?php endif;?>
 				<?php else : ?>
 					<h1 class="site-title text-center"><?php wp_title('')?></h1>
 			<?php endif; ?>

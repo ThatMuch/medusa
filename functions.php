@@ -23,11 +23,13 @@ function wpt_register_js() {
 	wp_register_script('burger-animate.min.js', get_template_directory_uri() . '/js/burger-animate.min.js');
 	wp_register_script('animate-header.min.js', get_template_directory_uri() . '/js/animate-header.min.js');
 	wp_register_script('scroll.min.js', get_template_directory_uri() . '/js/scroll.min.js');
+	wp_register_script('slide-in.min.js', get_template_directory_uri() . '/js/slide-in.min.js');
     wp_enqueue_script('jquery.bootstrap.min');
     wp_enqueue_script('form.min.js');
 	wp_enqueue_script('burger-animate.min.js');
 	wp_enqueue_script('animate-header.min.js');
 	wp_enqueue_script('scroll.min.js');
+	wp_enqueue_script('slide-in.min.js');
 }
 add_action( 'init', 'wpt_register_js' );
 
@@ -261,3 +263,5 @@ require_once('wp_bootstrap_navwalker.php');
 // Update Theme
 require_once('wp-updates-theme.php');
 new WPUpdatesThemeUpdater_1974( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
+
+add_theme_support( 'custom-logo' );

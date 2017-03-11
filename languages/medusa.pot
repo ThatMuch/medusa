@@ -31,19 +31,19 @@ msgstr ""
 msgid "Try looking in the monthly archives. %1$s"
 msgstr ""
 
-#: functions.php:64
+#: functions.php:66
 msgid "Primary"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:109
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:109, functions.php:118
+#: functions.php:111, functions.php:120
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:116
+#: functions.php:118
 msgid "Formulaire"
 msgstr ""
 

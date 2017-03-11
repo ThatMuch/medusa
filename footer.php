@@ -12,7 +12,7 @@
 ?>
 	</main><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo" style="background-image: url(<?php echo get_template_directory_uri(); ?>/images/bg-v.png),linear-gradient(134deg, #3023AE 0%, #C96DD8 100%);">
 	<img class="top-header" src="<?php echo get_template_directory_uri(); ?>/images/top.svg" alt="">
 		<nav id="footer-navigation" class="row navbar navbar-toggleable-md " role="navigation">
 		 <div class="navbar-brand  col"><a href="#"><?php bloginfo( 'name' ); ?></a></div>
